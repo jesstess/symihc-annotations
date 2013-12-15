@@ -1,0 +1,81 @@
+This repository houses a collection of scripts to annotate Stuff You Missed in
+History Class podcasts so that we can answer questions like:
+
+* What percentage of podcasts are about women?
+* What are all of the podcasts on events and people in the 1950s?
+* What are all of the podcasts on events and people in South America?
+
+As these annotations are inputted manually, mistakes may happen;
+patches welcome!
+
+
+Dependencies
+============
+
+* python-feedparser
+* sqlite3
+
+
+Setup
+=====
+
+We can streamline this process if anyone besides me ends up using this
+repository. :)
+
+1. Run `python create_tables.py` to create the tables.
+
+2. Run `python populate.py` to do basic processing of all new podcasts
+   not already in the database. You can quit this script with Ctl-C at
+   any time to save your work and pick back up later.
+
+3. Run `python tags.py` to create tag entries.
+
+4. Run `python set_tags.py` to set the tags for each tag processor
+that has been defined.
+
+
+Schema
+======
+
+podcast
+-------
+id
+pub_date
+name
+description
+podcast link
+on_individual?
+    individual_gender
+location
+start time
+end time
+
+host
+----
+id
+name
+gender
+
+podcast_host
+------------
+podcast_id
+host_id
+
+tag
+---
+tag_id
+tag_name
+
+podcast_tag
+-----------
+podcast_id
+tag_id
+
+
+TODO
+====
+
+* Podcast location data
+* Podcast time period data
+* Information on hosts
+* More tags
