@@ -1,0 +1,49 @@
+This file houses notes and clarifications on annotation choices.
+
+podcast table field: individual_gender
+======================================
+
+This field is currently 'm' (male) or 'f' (female) as that's been the analytical
+focus. Adding support for other gender identities is welcome.
+
+Charley Parkhurst, One-eyed Whip
+- Born anatomically female, lived life as male
+- Gender in db is male; keep full story in mind when doing gender analysis
+
+The True Story of the Chevalier d'Eon: Part 2
+- Born anatomically male, lived life as both male and female
+- Identified as female at end of life
+- Gender in db is female; keep full story in mind when doing gender analysis
+
+Some podcasts are about groups of women (e.g. "Four Flights of Female Aviators")
+or about a specific woman as well as specific other individuals. If you are
+analyzing gender representation in the podcasts, note that these group podcasts
+will not have the `individual_gender` field set; this field is only set for
+individuals.
+
+podcast table field: on_individual
+==================================
+
+Typically, if a single person is in the title or is stated to be the focus in
+the description, it's marked as about an individual.
+
+When two or more specific people are the focus, it is not marked as about an
+individual.
+
+tag: African Americans
+======================
+
+Who was "Black Moses"?
+- Marcus Garvey was not born in the United States, but he lived in the US as an
+  adult and was influential in African American political and social
+  movements. The `African Americans` tag is thus applied to this podcast.
+
+The Amistad Mutiny
+- The prisoners aboard La Amistad were not African American, but the resulting
+  court case was heard by the US Supreme Court and the event influenced African
+  American political and social movements.  The `African Americans` tag is thus
+  applied to this podcast.
+
+Madame Lalaurie and the Haunting of Royal Street
+- The focus is on the white Madam Lalaurie and not the slaves she tortured, so
+  this podcast doesn't have the `African Americans` tag.
